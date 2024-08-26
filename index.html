@@ -1,0 +1,360 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Basics to Advanced - Everything in one place</title>
+</head>
+<body style="overflow: auto;">
+    <center><h1 class="mainheading"><u>Python Basics to Advanced</u></h1><hr>
+    <q class="quote" style="font-weight: bolder;">We make for you & only for you .</q><br>
+    <q style="font-weight: bolder;">Practice is key .</q><br>
+    <q style="font-weight: bolder;">Search on web or contanct us for whatever you don't understanda anything .</q><br></center>
+
+    <hr><br>
+    <h3>Some general points</h3>
+    <ol>
+        <li>Python is case sensetive. i.e., Upper and lower class characters are treated differently .</li>
+        <li>All functions or keywords starts with small letters except True, False, and None .</li>
+        <li>Pass keyword is used for skipping a part of program .</li>
+        <li>Python is relatively slow compared to other languages .</li>
+        <li>Syntax should be kept in mind .</li>
+        <li>Indentation should be proper .</li>
+        <li>Python is a dynamically typed language .
+            <ul>
+                <li><u>Dynamic typing</u> - When you use same variable for storing multiple type values like string, integer, list, etc its called dynamic typing and you don't have to tell the computer the type of vairable .</li>
+                <li><u>Static typing</u> - When you have to tell the computer which type of variable you want to use, its called static typing . You can't use same variable for multiple type of values .
+            </ul>
+        </li>
+        <li>There are two types of data types .
+            <ol>
+                <li><u>Mapping data type</u> - In this type of data type the data is given in the form of key-value pair . Where key is the position/identity of value<br>In python there are two mapping data types dictionary and sets(we will talk about it latter) .</li>
+                <li><u>sequence data type</u> - In this type data is written in sequences, like string, list, tuple. In this data types indexing is used to find position of values .</li>
+                <li>Set comes in both sequence and mapping data types .</li>
+            </ol>
+        </li>
+        <li>Indexing - Tells position of any value in a sequence data type(i.e., list, tuple, string, set) . Think of it as counting from any one side of our data type .<br>
+            <ul>
+                <li>When counting from left to right start from 0 .</li>
+                <li>When counting from right to left start from -1 .</li>
+            </ul>
+        </li>
+        <li>Data type conversion .
+            <p>To convert a data type to other .</p>
+            <ul>
+                <li><u>Implicit type conversion</u> - Computer does it itself .</li>
+                <li><u>Explicit type conversion</u> - You do it according to you needs</li>
+                e.g., float to int is mostly done implicitly and int to string is converted explicitly(converting string to int will give a garbage value)
+                <li style="list-style: square;">The type conversion is dependent on which type is to be converted from which type . e.g., int type can not be converted in list type .</li>
+            </ul>
+        </li>
+        <li>A garbage value means a series of 10-12 digits number which has no meaning for us .</li>
+        <li>To call a functoin braces is must otherwise you will not be calling it .</li>
+    </ol>
+
+    <br><br><hr>
+    <h3>Rules for Variables</h3>
+    <p>A variable is used to store a value inside it .</p>
+    <ul>
+        <li>It shouldn't start from a number .</li>
+        <li>Space is not allowed .</li>
+        <li>Underscore is allowed .</li>
+        <li>Special characters are not allowed .</li>
+    </ul>
+
+    <br><br><hr>
+    <h3>Comments</h3>
+    <p>A comment is used within a program in order to write something you don't want users to read.<br>To make others who sees your code understand it better .<br></p>
+    <li style="list-style: square;">comments are written in 2 types</li>
+    <ol>
+        <li><u>Single line</u> - Using hash(#comment) .</li>
+        <li><u>Multi line</u> - Using triple quotes("""comment""") .</li>
+    </ol>
+    <li style="list-style: square;"><i>Single line comments shouldn't be used in middle of the line because the next part of code will also come in comment .</i></li>
+    
+    <br><br><hr>
+    <h3>Some special characters</h3>
+    <p>Special characters in python are used for special meanings.<br>There are many special characters but we are only going to see some important and popular ones .</p>
+    <ul>
+        <li>They are all used in quotes .</li>
+    </ul>
+    <ol>
+        <li><u>(\n)New line</u> - For new line OR For skipping the current line and going to nex line.</li>
+        <li><u>(\")In-string quotes</u> - For using quotes as a character and not for syntax.<br>e.g., He said you are a "Fool". If you want to print it, you have to use in-string qoutes before and after fool word .</li>
+        <li><u>(\t)Tab char</u> - To give space equal to a tab. Doing it manually is longer.</li>
+    </ol>
+    
+    <br><br><hr>
+    <h3>Range function and Subscript method</h3>
+    <ul>
+        <li>Range is a function and subscripting is a method .</li>
+        <li>Both are used in the form of (start, stop, step) .</li>
+        <ul style="list-style-type: square;">
+            <li>Start is by default 0 .</li>
+            <li>Stop is by default length of data type .</li>
+            <li>The value of stop is stop-1(where stop is the value you give to your function) .</li>
+        </ul>
+        <li>The values are passed in braces in range function while in subscript method square brackets are used .</li>
+        <li>The range function is used in loops whereas subscripts are used in with name of list, string then in square brackets other parts .</li>
+        <li>If we pass only one value in range/subscript function, it will be served as stop(i.e., stop-1) . Then next value will be passed to start then next comes stop. No decimal values will be accepted .</li>
+        <li>The values are seperated by commas in range and by colon in subscript .</li>
+        <li><u>Syntax </u>
+            <ol>
+                <q><i>Don't mind the code just see the syntax .</i></q>
+                <li><u>Range</u><br>
+                    <pre>
+#Program to print a table of an integer abc .
+abc=5
+for xyz in range(1,11):     #(stop)11=(stop-1)10
+    print(xyz*abc)
+#Output - 5 10 15 20 25 30 35 40 45 50
+#The output will come in new line after each<br>previous output in this case .
+                    </pre>
+                </li>
+                <li><u>Subscript</u><br>
+                    <pre>
+#Program to print a part of a string abc
+abc="Hello world"
+print(abc[0:6])     #(stop)6=(stop-1)5
+#Output - Hello
+                    </pre>
+                </li>
+            </ol>
+        </li>
+    </ul>
+
+    <br><br><hr>
+    <h3>Use of print and return statements</h3>
+    <ul>
+        <li>Print is a function & return is a keyword .</li>
+        <li>We need them to get a value from our program .</li>
+        <li>Print displays the value to screen while return stores the value in a function or in a variable .</li>
+        <li>Print can be used anywhere whereas return is used only inside of a function to store the value to its function .</li>
+        <li>When we use return inside a function we must write that function within print statement to print the returned value .</li>
+    </ul>
+
+    <br><br><hr>
+    <h3>Use of input function</h3>
+    <p>To take input from user .</p>
+    <ul>
+        <li>By default the values taken is in string type . If syntax of other data types is used or integer/float values are given then it will be converted in string .<br></li>
+        <li>We can change the type of input we want from user according to our needs .</li>
+        <li><u>Syntax</u><br>user_input=int(input("Enter a number"))    #To take integer input .</li>
+    </ul>
+
+    <br><br><hr>
+    <h2 class="conditions">Conditional statements</h2>
+    <p>A conditional statement is used to make choices for our work .</p>
+    <ul>
+        <li>There can be mostly three types of blocks in a conditional statements .</li>
+        <li>All three of them are keywords .</li>
+    </ul>
+    <ol start="1">
+        <li>if block</li>
+    </ol>
+    <ul>
+        <li>The if block is used to make a termination condition mostly, which means a loop breaking condition .<br>But It can still be used to make other conditions .</li>
+        <li>The condition is written in if block primarily .</li>
+    </ul>
+
+    <ol start="2">
+        <li>elif block</li>
+    </ol>
+    <ul>
+        <li>The elif block is used to make a 2nd condition . Not vastly used though .</li>
+        <li>The condition is written in elif block only when if block is not enough to satisfy the requirements of our work .</li>
+    </ul>
+
+    <ol start="3">
+        <li>else block</li>
+    </ol>
+    <ul>
+        <li>The else block is used without a condition to make any decision other then what we gave in if or elif block .</li>
+    </ul>
+    <li><u>Syntax for all coditional statements</u>
+        <pre>
+x=int(input("Enter a number"))
+if 5 > x:
+    print("5 is greater than x .")
+#(when this condition is true)Output - 5 is greater than x .
+elif 5 < x:
+    print("5 is smaller than x .")
+#(when this condition is true)Output - 5 is smaller than x .
+else:
+print("5 is equal to x .")
+#(when this condition is true)Output - 5 is equal to x .
+        </pre>
+    </li>
+    
+    <br><br><hr>
+    <h2 class="loops">Looping contructs</h2>
+    <p>Its used to iterate through a data type .</p>
+    <li>Iteration - Going on each character of a data type .</li>
+    <li>A loop runs one time for first element and then does its functioning ,<br>Then it goes to next element then prints it and so on .<br>It does not iterate through all character all at once .</li>
+    <li>A condition is used as a rule we set in order to know how many times a loop is too be iterated .<br>It will be helpful in running infinite loops .</li>
+    <li>You can use True keyword as a condition to run infinite loop .</li>
+    <ol>
+        <li>For loop</li>
+        <li style="list-style: square;"><u>Syntax</u></li>
+        <pre>
+for i in range(1,11):
+    print(i)
+#Output - 1 2 3 4 5 6 7 8 9 10
+        </pre>
+        <li style="list-style: circle;">
+            Explanation - <br>
+            Firstly, for loop is used to loop through the range from 1-11,<br>
+            then its value is stored in a variable i, <br>
+            which then is printed by print function .
+        </li>
+        <li style="list-style: circle;">Range function is required .</li>
+    </ol>
+    <br>
+    <ol start="2">
+        <li>While loop</li>
+        <li style="list-style: square;"><u>Syntax</u></li>
+        <pre>
+#Making infinite loop .
+while True:
+    print("Sorry")
+#Output - Print sorry infinitely .
+
+#Making finite loop .
+x=10
+y=1
+while y<=10:
+    print(x*y)
+    y+=1
+#Output - 10 20 30 40 50 60 70 80 90 100
+        </pre>
+        <li style="list-style: circle;">Range is not required .</li>
+        <li style="list-style: circle;">
+            Explanation - <br>
+            Firstly, while loop is used to loop till y is less then and equal to 10,<br>
+            and then its printed after being multiplied by x, also each time 1 value is added to y to keep the condition in check .
+        </li>
+    </ol>
+
+    <br><br><hr>
+    <h2 class="subheadings">String</h2>
+    <p class="string">A string is a sequence of characters, integers, special characters, or mixtures of all .</p>
+    <ul>
+        <li>Its written in single or double quotes .</li>
+        <li><u>Syntax</u><br>str1="This is my first string ."</li>
+        <li>Space is counted as a part of string .</li>
+        <li>Empty string is a string with no characters within it .</li>
+    </ul>
+
+    <br><br><hr>
+    <h2 class="subheadings">List</h2>
+    <p class="list">A list is just a list of some elements elements .</p>
+    <ul>
+        <li>Its written in square brackets .</li>
+        <li>A list can have another list, string, tuple, integers, etc as its element .</li>
+        <li>Empty list is possible .</li>
+        <li>every element is seperated by commas .</li>
+        <li><u>Syntax</u><br>list1=["Anuj", "Shivam", "Jyoti", 123, 12.05]</li>
+    </ul>
+
+    <br><br><hr>
+    <h2 class="subheadings">Tuple</h2>
+    <p class="tuple">A tuple is nothing different than a list . Its just that the elements are given in braces .</p>
+    <li>A comma is given after a single element tuple(inside braces) otherwise it will show syntax error</li>
+    <li><u>Syntax</u>
+        <pre>
+   tup1=("xyz", 1)     #for multi-element tuple .
+   tup2=(1,)           #for single element tuple .
+        </pre>
+    </li>
+
+    <br><br><hr>
+    <h2 class="subheadings">Dictionary</h2>
+    <p class="dictionary">A dictionary is a mapping data type, that's used to store the value in a key-value pair. Where the keys and values are seperated by colon and their pairs are seperated by commas .</p>
+    <ul>
+        <li style="list-style: square;">The key part is immutable so that no one can change it .</li>
+        <li style="list-style: square;">The value part is mutable so that it could be updated .</li>
+        <li>A dictionary can have all other data types as its vlaue including a dictionary as well .</li>
+        <li>If same keyword is used multiple times than the later used keywrod replaces the previously used one .</li>
+        <li>Slicing is not possible</li>
+        <li>An empty dictionary has a length of 0 .</li>
+        <li>A dictionary is using curly brackets .</li>
+        <li><u>Syntax</u>
+            <pre>
+dict1={1:"Anuj", 2:"Jyoti", 3:"Aryaveer", 4:20.4, 999:49,}
+    print(dict1[2])
+#Output - Jyoti
+            </pre>
+        </li>
+        <li>Explanation -<br>
+            Firstly everything is stored in dictionary named dict1 where we have numeric type keys and string, int, and float type values ,<br>
+            which Python returns to us when we call them using print, within which we have given the keyword 2 which returns value Jyoti .
+        </li>
+    </ul>
+
+    <br><br><hr>
+    <h2 class="argsandparas">Parameters and Arguments</h2>
+    <p>Parameters are vairables we pass to a fucntion while defining them . The parameters are to be passed while calling them as well</p>
+    <h4>Parameters</h4>
+    <p>There are 2 types of parameters .</p>
+    <ul>
+        <li><u>Foraml parameters</u> - The vairables we pass to a fucntion inside braces while defining them .</li>
+        <li><u>Actual parameters</u> - The values we pass to those variables while calling the functions .</li>
+    </ul>
+    <h4>Arguments</h4>
+    <p>There are 4 types of arguments .</p>
+    <q>The way we write/give/pass/put a variable to a function is how the type of argument is defined .</q>
+    <ol>
+        <li><u>Positional arguments</u> - Arguments that you starts giving values in a order(left to right) .</li>
+        <li><u>Default arguments</u> - Arguments having predefined values . We pass values from right to left in default arguments in order to avoid being overwritten by positional arguments or keyword arguments .</li>
+        <li><u>Variable length arguments</u> - A variable used after asterisk(*) symbol. we can pass as many values as we want with just one argument . This kind of argument is not highly used .</li>
+        <li><u>Keyword arguments</u> - Using variables before passing values while calling the function .</li>
+    </ol>
+    <li><u>Syntax</u>
+        <pre>
+def table(x, y=1):      #y is default argument, x is positional arguments .
+    while y<=10:
+        print(x*y)
+a=int(input("Enter a number: "))
+table(x=a)      #x is keyword here because of the way it's value is passed .
+#If a would have been passed like - table(a) then it would have been a positional argument
+        </pre>
+    </li>
+    <li style="list-style: square;">Variables inside braces is called parameters. while only variables are called arguments<br><pre>e.g., def table(x)      #Here (x) is a parameter whereas x alone is an argument .</pre></li>
+    
+    <br><br><hr>
+    <h2 class="subheadings">Defining a functions using def keyword</h2>
+    <p class="function_definations">Defining a function is necessary for both user and programmer . Imagine something is not functional and there is no function to do that tasks you will have to define it yourself .</p>
+    <ul>
+        <li style="list-style: square;">A function is a "block of code" that is used to do some specific tast "inside a program" .</li>
+        <ol>
+            <li>It helps us in making our code more readable and clear .</li>
+            <li>Its easy to maintain</li>
+            <li>Reusable</li>
+            <li>Easy to find errors</li>
+        </ol>
+        <li>A function is needed to be called to use it .</li>
+        <li>You should avoid using arguments as long as you don't master them or it will be complex</li>
+        <q>Don't use them in something important like tests or projects but don't skip practicing them .</q>
+        <li><u>Syntax</u></li>
+        <pre>
+#Program to print table of a number .
+def table():
+    x=int(input("Enter a number: "))
+    for i in range(1,11):
+        return(i*x)
+"""
+Call it as -
+print(table())
+"""
+#(Assuming x is 2)Output - 2 4 6 8 10 12 14 16 18 20
+            </pre>
+    </ul>
+
+    <br><hr><br>
+    <form action="#">
+        <textarea placeholder="Please give us your feedback." cols="100%" rows="3" style="border: 2px solid black;"></textarea>
+        <br><br>
+        <input type="submit" value="Send Feedback" style="position: relative; left: 30%; border: 2px solid black; border-radius: 5px;">
+    </form>
+</body>
+</html>
+
